@@ -1,0 +1,15 @@
+name: ThrowTNT
+version: 0.0.1
+main: dev.hevav.throwtnt.ThrowTNT
+commands:
+  tnttoggle:
+    description: Start/stop tntthrow
+    permission: throwtnt.toggle
+    usage: /tnttoggle
+permissions:
+  throwtnt.throw:
+    default: op
+    description: Право на выброс tnt
+  throwtnt.toggle:
+    default: op
+    description: Право на выброс tnt
