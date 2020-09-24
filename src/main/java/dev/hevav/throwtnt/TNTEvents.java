@@ -26,8 +26,18 @@ public class TNTEvents implements Listener {
             Location location = event.getPlayer().getLocation();
             TNTPrimed tnt = (TNTPrimed) location.getWorld().spawnEntity(location, EntityType.PRIMED_TNT);
             tnt.setFuseTicks(config.getInt("timeInSeconds") * 20);
+
             Vector tntVector = tnt.getVelocity();
-            tnt.setVelocity(tntVector.multiply(config.getInt("velocity")));
+            int velocity = config.getInt("velocity");
+            float playerRot = event.getPlayer().getLocation().getYaw();
+            float playerPitch = event.getPlayer().getLocation().getPitch();
+
+            tnt.setVelocity(
+                    tntVector.add(
+                            new Vector(
+                                    Math.sin(playerRot) * velocity,
+                                    (playerPitch - 90) / 180,
+                                    Math.cos(playerRot) * velocity)));
         }
     }
 
