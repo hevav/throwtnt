@@ -21,7 +21,7 @@ public class ToggleCommand implements CommandExecutor {
         toggle = !toggle;
 
         if (toggle) {
-            Bukkit.getPluginManager().registerEvents(new TNTEvents(), plugin);
+            Bukkit.getPluginManager().registerEvents(new TNTEvents(plugin), plugin);
         } else {
             HandlerList.unregisterAll(plugin);
         }

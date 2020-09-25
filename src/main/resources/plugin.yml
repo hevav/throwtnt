@@ -9,7 +9,7 @@ commands:
   tntconfig:
     description: Modify settings
     permission: throwtnt.toggle
-    usage: /tntconfig <id> <timeInSeconds> <velocity> <killRadius>
+    usage: /tntconfig <id> <timeInSeconds> <velocity> <killRadius> <playerVelocity>
 permissions:
   throwtnt.throw:
     default: op

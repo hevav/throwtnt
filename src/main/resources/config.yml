@@ -1,4 +1,10 @@
 idForThrow: 198
 timeInSeconds: 5
-velocity: 5
-killRadius: 5
+velocity: 12
+killRadius: 3
+playerVelocity: 3
+
+strings:
+  f: "%sF поцанчеку %s который попал в воду..."
+  dieTitle: "Вы проиграли"
+  dieSubtitle: "Но ничего страшного, ждите следующих семок)"
