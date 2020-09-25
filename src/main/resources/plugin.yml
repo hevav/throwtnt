@@ -6,10 +6,14 @@ commands:
     description: Start/stop tntthrow
     permission: throwtnt.toggle
     usage: /tnttoggle
+  tntconfig:
+    description: Modify settings
+    permission: throwtnt.toggle
+    usage: /tntconfig <id> <timeInSeconds> <velocity> <killRadius>
 permissions:
   throwtnt.throw:
     default: op
     description: Право на выброс tnt
   throwtnt.toggle:
     default: op
-    description: Право на выброс tnt
+    description: Право на включение выброса tnt
